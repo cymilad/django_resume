@@ -2,6 +2,19 @@ from django.db import models
 
 
 # Create your models here.
+class SocailMedia(models.Model):
+    telegram = models.URLField(verbose_name='لینک تلگرام')
+    youtube = models.URLField(verbose_name='لینک یوتیوب')
+    github = models.URLField(verbose_name='لینک گیت هاب')
+    instagram = models.URLField(verbose_name='لینک اینستاگرام')
+
+    def __str__(self):
+        return 'شبکه های اجتماعی'
+
+    class Meta:
+        verbose_name = 'شبکه های اجتماعی'
+        verbose_name_plural = 'تنظیمات شبکه های اجتماعی'
+
 class HeroSection(models.Model):
     first_name = models.CharField(max_length=100, verbose_name='نام')
     last_name = models.CharField(max_length=100, verbose_name='نام خانوادگی')
@@ -122,3 +135,23 @@ class Education(models.Model):
     class Meta:
         verbose_name = 'سابقه تحصیلی'
         verbose_name_plural = 'تنظیمات سابقه تحصیلی'
+
+
+class ProtfolioItem(models.Model):
+    CATEGORY_CHOICES = [
+        ('سایبر آموز', 'CyberAmooz'),
+    ]
+
+    title = models.CharField(max_length=255, verbose_name='عنوان')
+    description = models.TextField(blank=True, null=True, verbose_name='توضیحات')
+    category = models.CharField(max_length=50, choices=CATEGORY_CHOICES, verbose_name='دسته بندی')
+    image_thumbnail = models.ImageField(upload_to='portfolio/thumbanil/', verbose_name='تصویر')
+    image_main = models.ImageField(upload_to='portfolio/main/', verbose_name='تصویر اصلی')
+    link = models.URLField(blank=True, null=True)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'نمونه کار'
+        verbose_name_plural = 'تنظیمات نمونه کار'

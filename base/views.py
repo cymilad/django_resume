@@ -1,9 +1,12 @@
 from django.shortcuts import render
+from unicodedata import category
+
 from base.models import *
 
 
 # Create your views here.
 def index(request):
+    socialmedias = SocailMedia.objects.first()
     hero_section = HeroSection.objects.first()
     feature = Feature.objects.all()
     aboutme = AboutMe.objects.first()
@@ -14,6 +17,8 @@ def index(request):
     services = Service.objects.all()
     worksexprince = WorkExpreience.objects.all()
     educations = Education.objects.all()
+    items = ProtfolioItem.objects.all()
+    categories = ProtfolioItem.objects.values_list('category', flat=True).distinct()
 
     context = {
         'hero_sction': hero_section,
@@ -25,5 +30,8 @@ def index(request):
         'services': services,
         'worksexprince': worksexprince,
         'educations': educations,
+        'categories': categories,
+        'items': items,
+        'socialmedia': socialmedias,
     }
     return render(request, 'base/home.html', context)

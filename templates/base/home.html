@@ -27,10 +27,10 @@
                     </div>
                     <div class="social">
                         <ul>
-                            <li><a href="#"><i class="icon-telegram"></i></a></li>
-                            <li><a href="#"><i class="icon-youtube-play"></i></a></li>
-                            <li><a href="#"><i class="icon-github-circled-3"></i></a></li>
-                            <li><a href="#"><i class="icon-instagram-3"></i></a></li>
+                            <li><a href="{{ socialmedia.telegram }}"><i class="icon-telegram"></i></a></li>
+                            <li><a href="{{ socialmedia.youtube }}"><i class="icon-youtube-play"></i></a></li>
+                            <li><a href="{{ socialmedia.github }}"><i class="icon-github-circled-3"></i></a></li>
+                            <li><a href="{{ socialmedia.instagram }}"><i class="icon-instagram-3"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -392,7 +392,9 @@
                                             </g>
                                             </svg></span></span>
                                             <div class="resume_title">
-                                                <h3>{{ education.degree}} <span>({{ education.start_year }} - {{ education.end_year }})</span></h3>
+                                                <h3>{{ education.degree }}
+                                                    <span>({{ education.start_year }} - {{ education.end_year }})</span>
+                                                </h3>
                                                 <span class="company">{{ education.univercity }}</span>
                                             </div>
                                             <p class="text">
@@ -422,159 +424,32 @@
                 <div class="portfolio_filter">
                     <ul>
                         <li><a href="#" class="current" data-filter="*">همه</a></li>
-                        <li><a href="#" data-filter=".youtube">یوتیوب</a></li>
-                        <li><a href="#" data-filter=".vimeo">ویمیو</a></li>
-                        <li><a href="#" data-filter=".soundcloud">ساند کلود</a></li>
-                        <li><a href="#" data-filter=".popup">پاپ آپ</a></li>
-                        <li><a href="#" data-filter=".content">محتوا</a></li>
+
+                        {% for category in categories %}
+                            <li><a href="#" data-filter="{{ category }}">{{ category }}</a></li>
+                        {% endfor %}
+
                     </ul>
                 </div>
                 <div class="portfolio_list wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
                     <ul class="gallery_zoom">
-                        <li class="youtube">
-                            <div class="list_inner tilt-effect">
-                                <div class="image">
-                                    <img src="{% static 'img/thumbs/1-1.jpg' %}" alt=""/>
-                                    <div class="main" data-img-url="{% static 'img/portfolio/1.jpg' %}"></div>
-                                </div>
-                                <div class="details">
-                                    <h3>نمونه کار 1</h3>
-                                    <span>یوتیوب</span>
-                                </div>
-                                <a class="foliox_tm_full_link popup-youtube" href="https://www.youtube.com"></a>
-                            </div>
-                        </li>
-                        <li class="vimeo">
-                            <div class="list_inner tilt-effect">
-                                <div class="image">
-                                    <img src="{% static 'img/thumbs/1-1.jpg' %}" alt=""/>
-                                    <div class="main" data-img-url="{% static 'img/portfolio/2.jpg' %}"></div>
-                                </div>
-                                <div class="details">
-                                    <h3>نمونه کار 2</h3>
-                                    <span>ویمیو</span>
-                                </div>
-                                <a class="foliox_tm_full_link popup-vimeo" href="https://vimeo.com"></a>
-                            </div>
-                        </li>
-                        <li class="soundcloud">
-                            <div class="list_inner tilt-effect">
-                                <div class="image">
-                                    <img src="{% static 'img/thumbs/1-1.jpg' %}" alt=""/>
-                                    <div class="main" data-img-url="{% static 'img/portfolio/3.jpg' %}"></div>
-                                </div>
-                                <div class="details">
-                                    <h3>نمونه کار 3</h3>
-                                    <span>ساند کلود</span>
-                                </div>
-                                <a class="foliox_tm_full_link soundcloude_link mfp-iframe audio"
-                                   href="https://w.soundcloud.com"></a>
-                            </div>
-                        </li>
-                        <li class="popup">
-                            <div class="list_inner tilt-effect">
-                                <div class="image">
-                                    <img src="{% static 'img/thumbs/1-1.jpg' %}" alt=""/>
-                                    <div class="main" data-img-url="{% static 'img/portfolio/4.jpg' %}"></div>
-                                </div>
-                                <div class="details">
-                                    <h3>نمونه کار 4</h3>
-                                    <span>پاپ آپ</span>
-                                </div>
-                                <a class="foliox_tm_full_link zoom" href="{% static 'img/portfolio/4.jpg' %}"></a>
-                            </div>
-                        </li>
-                        <li class="popup">
-                            <div class="list_inner tilt-effect">
-                                <div class="image">
-                                    <img src="{% static 'img/thumbs/1-1.jpg' %}" alt=""/>
-                                    <div class="main" data-img-url="{% static 'img/portfolio/5.jpg' %}"></div>
-                                </div>
-                                <div class="details">
-                                    <h3>نمونه کار 5</h3>
-                                    <span>پاپ آپ</span>
-                                </div>
-                                <a class="foliox_tm_full_link zoom" href="{% static 'img/portfolio/5.jpg' %}"></a>
-                            </div>
-                        </li>
-                        <li class="content">
-                            <div class="list_inner tilt-effect">
-                                <div class="image">
-                                    <img src="{% static 'img/thumbs/1-1.jpg' %}" alt=""/>
-                                    <div class="main" data-img-url="{% static 'img/portfolio/6.jpg' %}"></div>
-                                </div>
-                                <div class="details">
-                                    <h3>نمونه کار 6</h3>
-                                    <span>محتوا</span>
-                                </div>
-                                <a class="foliox_tm_full_link portfolio_popup" href="#"></a>
 
-                                <div class="hidden_content">
-                                    <div class="popup_details">
-                                        <div class="main_details">
-                                            <div class="textbox">
-                                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                                    استفاده از طراحان گرافیک است.</p>
-                                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                                    استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله
-                                                    در
-                                                    ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-                                                    نیاز و
-                                                    کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
-                                            </div>
-                                            <div class="detailbox">
-                                                <ul>
-                                                    <li>
-                                                        <span class="first">Client</span>
-                                                        <span>Alvaro Morata</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="first">Category</span>
-                                                        <span><a href="#">Content</a></span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="first">Date</span>
-                                                        <span>October 07, 2022</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="additional_images">
-                                            <ul>
-                                                <li>
-                                                    <div class="list_inner">
-                                                        <div class="my_image">
-                                                            <img src="{% static 'img/thumbs/4-2.jpg' %}" alt=""/>
-                                                            <div class="main"
-                                                                 data-img-url="{% static 'img/portfolio/1.jpg' %}"></div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="list_inner">
-                                                        <div class="my_image">
-                                                            <img src="{% static 'img/thumbs/4-2.jpg' %}" alt=""/>
-                                                            <div class="main"
-                                                                 data-img-url="{% static 'img/portfolio/2.jpg' %}"></div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="list_inner">
-                                                        <div class="my_image">
-                                                            <img src="{% static 'img/thumbs/4-2.jpg' %}" alt=""/>
-                                                            <div class="main"
-                                                                 data-img-url="{% static 'img/portfolio/3.jpg' %}"></div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
+                        {% for item in items %}
+                            <li class="{{ item.category }}">
+                                <div class="list_inner tilt-effect">
+                                    <div class="image">
+                                        <img src="{{ item.image_thumbnail.url }}" alt=""/>
+                                        <div class="main" data-img-url="{{ item.image_main.url }}"></div>
                                     </div>
+                                    <div class="details">
+                                        <h3>{{ item.title }}</h3>
+                                        <span>{{ item.category }}</span>
+                                    </div>
+                                    <a class="foliox_tm_full_link" href="{{ item.link }}"></a>
                                 </div>
+                            </li>
+                        {% endfor %}
 
-                            </div>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -986,7 +861,8 @@
     <div class="foliox_tm_section">
         <div class="foliox_tm_copyright">
             <div class="container">
-                <p class="wow fadeInUp" data-wow-duration="1s">فارسی و <a href="" target="_blank">راست چین</a> شده
+                <p class="wow fadeInUp" data-wow-duration="1s"> وب سایت طراحی شده توسط <a
+                        href="https://github.com/cymilad" target="_blank">میلاد رنجبر</a>
                 </p>
             </div>
         </div>
