@@ -14,7 +14,7 @@ class HeroSection(models.Model):
 
     class Meta:
         verbose_name = 'اطلاعات شخصی'
-        verbose_name_plural = 'اطلاعات شخصی'
+        verbose_name_plural = 'تنظیمات اطلاعات شخصی'
 
 
 class Feature(models.Model):
@@ -27,7 +27,7 @@ class Feature(models.Model):
 
     class Meta:
         verbose_name = 'ویژگی'
-        verbose_name_plural = 'ویژگی ها'
+        verbose_name_plural = 'تنظیمات ویژگی ها'
 
 
 class AboutMe(models.Model):
@@ -54,10 +54,10 @@ class AboutMe(models.Model):
 
 
 class Counter(models.Model):
-    title = models.CharField(max_length=100,verbose_name='عنوان')
+    title = models.CharField(max_length=100, verbose_name='عنوان')
     value = models.PositiveIntegerField(verbose_name='مقدار')
-    suffix = models.CharField(max_length=10, blank=True, null=True)
-    speed = models.IntegerField(default=2000,verbose_name='سرعت')
+    suffix = models.CharField(max_length=100, blank=True, null=True)
+    speed = models.IntegerField(default=2000, verbose_name='سرعت')
 
     def __str__(self):
         return self.title
@@ -65,3 +65,60 @@ class Counter(models.Model):
     class Meta:
         verbose_name = 'شمارنده'
         verbose_name_plural = 'تنظیمات شمارنده'
+
+
+class Skill(models.Model):
+    name = models.CharField(max_length=100, verbose_name='نام مهارت')
+    percentage = models.PositiveIntegerField(verbose_name='درصد مهارت')
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'مهارت ها'
+        verbose_name_plural = 'تنظیمات مهارت ها'
+
+
+class Service(models.Model):
+    title = models.CharField(max_length=200, verbose_name='عنوان')
+    description = models.TextField(verbose_name='توضیحات')
+    icon = models.TextField(verbose_name='آیکون به صورت SVG')
+    order = models.PositiveIntegerField(default=0, verbose_name='ترتیب نمایش')
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        ordering = ['order']
+        verbose_name = 'خدمت'
+        verbose_name_plural = 'تنظیمات خدمات'
+
+
+class WorkExpreience(models.Model):
+    position = models.CharField(max_length=100, verbose_name='عنوان شغلی')
+    company = models.CharField(max_length=100, verbose_name='اسم شرکت')
+    start_year = models.IntegerField(verbose_name='سال شروع فعالیت')
+    end_year = models.CharField(max_length=10, blank=True, null=True, verbose_name='سال پایان فعالیت')
+    description = models.TextField(verbose_name='توضیحات')
+
+    def __str__(self):
+        return self.company
+
+    class Meta:
+        verbose_name = 'سابقه کاری'
+        verbose_name_plural = 'تنظیمات سابقه کاری'
+
+
+class Education(models.Model):
+    degree = models.CharField(max_length=100, verbose_name='عنوان رشته')
+    univercity = models.CharField(max_length=100, verbose_name='نام دانشگاه')
+    start_year = models.IntegerField(verbose_name='سال شروع تحصیل')
+    end_year = models.CharField(max_length=10, blank=True, null=True, verbose_name='سال پایانی تحصیل')
+    description = models.TextField(verbose_name='توضیحات')
+
+    def __str__(self):
+        return self.univercity
+
+    class Meta:
+        verbose_name = 'سابقه تحصیلی'
+        verbose_name_plural = 'تنظیمات سابقه تحصیلی'
