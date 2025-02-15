@@ -8,3 +8,4 @@ class AboutMeAdmin(admin.ModelAdmin):
 admin.site.register(HeroSection)
 admin.site.register(Feature)
 admin.site.register(AboutMe, AboutMeAdmin)
+admin.site.register(Counter)

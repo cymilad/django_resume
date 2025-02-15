@@ -164,7 +164,7 @@
                                         <li>
                                             <span>شماره موبایل</span>
                                             <p class="tm2">
-                                              <a href="tel:{{ aboutme.phone }}">{{ aboutme.phone }}</a>
+                                                <a href="tel:{{ aboutme.phone }}">{{ aboutme.phone }}</a>
                                             </p>
                                         </li>
                                     </ul>
@@ -186,7 +186,7 @@
                                         <li>
                                             <span>فریلنسر</span>
                                             <p>
-                                                {{ aboutme.freelancer_status|yesno:'بله،خیر' }}
+                                                {{ aboutme.freelancer_status|yesno:'بله,خیر' }}
                                             </p>
                                         </li>
                                     </ul>
@@ -212,34 +212,18 @@
             <div class="container">
                 <div class="counter_list">
                     <ul>
-                        <li>
-                            <div class="list_inner tilt-effect">
-                                <h3><span class="tm_counter" data-from="0" data-to="20" data-speed="2000">0</span>
-                                </h3>
-                                <span class="title">محصولات دیجیتال</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="list_inner tilt-effect">
-                                <h3><span class="tm_counter" data-from="0" data-to="280" data-speed="2000">0</span>
-                                </h3>
-                                <span class="title">مشتریان ثابت</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="list_inner tilt-effect">
-                                <h3><span class="tm_counter" data-from="0" data-to="3" data-speed="2000">0</span>K
-                                </h3>
-                                <span class="title">کل پروژه ها</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="list_inner tilt-effect">
-                                <h3><span class="tm_counter" data-from="0" data-to="9" data-speed="2000">0</span>+
-                                </h3>
-                                <span class="title">برنده جوایز</span>
-                            </div>
-                        </li>
+
+                        {% for count in counter %}
+                            <li>
+                                <div class="list_inner tilt-effect">
+                                    <h3>
+                                        <span class="tm_counter" data-from="0" data-to="{{ count.value }}" data-speed="{{ count.speed }}">{{ count.suffix }}</span>
+                                    </h3>
+                                    <span class="title">{{ count.title }}</span>
+                                </div>
+                            </li>
+                        {% endfor %}
+
                     </ul>
                 </div>
             </div>
