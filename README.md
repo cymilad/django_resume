@@ -58,6 +58,10 @@
 - **Python** 🦴
 - **Django** 💚
 
+Install Github ⏬
+```bash
+git clone https://github.com/cymilad/django_resume.git
+```
 
 Install Virtualenv 📦
 ```bash
