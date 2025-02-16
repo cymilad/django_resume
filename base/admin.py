@@ -16,6 +16,10 @@ class ServiceAdmin(admin.ModelAdmin):
     list_editable = ['order']
 
 
+class ContactInfoAdmin(admin.ModelAdmin):
+    list_display = ['email', 'phone', 'address']
+
+
 admin.site.register(SocailMedia, SocailMediaAdmin)
 admin.site.register(HeroSection)
 admin.site.register(Feature)
@@ -27,5 +31,6 @@ admin.site.register(WorkExpreience)
 admin.site.register(Education)
 admin.site.register(ProtfolioItem)
 admin.site.register(BlogPost)
-admin.site.register(ContactInfo)
+admin.site.register(ContactInfo, ContactInfoAdmin)
 admin.site.register(ContactMessage)
+admin.site.register(Subscribe_Email)

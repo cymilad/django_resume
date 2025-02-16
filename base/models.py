@@ -202,3 +202,14 @@ class ContactMessage(models.Model):
     class Meta:
         verbose_name = 'ارتباط با من'
         verbose_name_plural = 'تنظیمات ارتباط با من'
+
+
+class Subscribe_Email(models.Model):
+    email = models.EmailField(verbose_name='ایمیل')
+
+    def __str__(self):
+        return self.email
+
+    class Meta:
+        verbose_name = 'عضویت ایمیلی'
+        verbose_name_plural = 'مدیریت عضویت ایمیلی'
