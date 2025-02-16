@@ -30,7 +30,7 @@
 
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/cymilad/django_resume/refs/heads/resume/Pictures/admin-panel.png?token=GHSAT0AAAAAAC4YZPBGQGKR6JQZLQXJLRGGZ5R3EPA"  />
+  <img src="https://github.com/cymilad/django_resume/blob/resume/Pictures/admin-panel.png"  />
 </div>
 
 ###
