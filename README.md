@@ -74,7 +74,7 @@ Library Python for Run Project 🛠️
 pip install -r requirements.txt
 ```
 
-Open Browser Go to Url: http://127.0.0.1:8000 🌐
+Open Browser Go to Url : http://127.0.0.1:8000 🌐
 ```bash 🌐
 python manage.py runserver
 ```
