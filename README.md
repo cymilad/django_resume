@@ -18,7 +18,7 @@
 ###
 
 <div align="center">
-  <img height="600" src="https://raw.githubusercontent.com/cymilad/django_resume/refs/heads/resume/Pictures/admin-panel-3.png?token=GHSAT0AAAAAAC4YZPBHKSUEC4XXCL3DFTISZ5R2DJA"  />
+  <img height="600" src="https://raw.githubusercontent.com/cymilad/django_resume/refs/heads/resume/Pictures/admin-panel-2.png?token=GHSAT0AAAAAAC4YZPBHZG52ZZB2MMPQEJRIZ5R3FJQ"  />
 </div>
 
 ###
