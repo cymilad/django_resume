@@ -59,7 +59,20 @@
 - **Django** 💚
 
 ```bash
+pip install virtualenv
+```
+
+Windows Terminal 🪟
+```bash
+.\venv\Scripts\activate
+```
+
+```bash
 pip install -r requirements.txt
+```
+
+```bash
+python manage.py runserver
 ```
 
 ###
