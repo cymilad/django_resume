@@ -58,34 +58,34 @@
 - **Python** 🦴
 - **Django** 💚
 
-Download Project ⏬
+⏬ Download Project 
 ```bash
 git clone https://github.com/cymilad/django_resume.git
 ```
 
-Install Virtualenv 📦
+📦 Install Virtualenv 
 ```bash
 pip install virtualenv
 ```
 
-Windows Terminal 🪟
+🪟 Windows Terminal 
 ```bash
 .\venv\Scripts\activate
 ```
 
-Library Python requirement for Run Project 🛠️
+🛠️ Library Python requirement for Run Project 
 ```bash
 pip install -r requirements.txt
 ```
 
-Open Browser Go to Url : http://127.0.0.1:8000 🌐
-```bash 🌐
+🌐 Open Browser Go to Url : http://127.0.0.1:8000 
+```bash 
 python manage.py runserver
 ```
 
 ###
 
-<h3 align="left">Contact Author 👨‍💻</h3>
+<h3 align="left">👨‍💻 Contact Author</h3>
 
 <p>
   You can contact me through the following communication channels
