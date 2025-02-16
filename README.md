@@ -10,8 +10,9 @@
 
 ###
 
+
 <div align="center">
-  <img height="600" src="https://raw.githubusercontent.com/cymilad/django_resume/refs/heads/resume/Pictures/admin-panel.png?token=GHSAT0AAAAAAC4YZPBGINYXW4KPDTR3Y5ICZ5RZ53A"  />
+  <img height="600" src="https://raw.githubusercontent.com/cymilad/django_resume/refs/heads/resume/Pictures/admin-panel.png?token=GHSAT0AAAAAAC4YZPBGQGKR6JQZLQXJLRGGZ5R3EPA"  />
 </div>
 
 ###
