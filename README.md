@@ -2,7 +2,6 @@
 
 ###
 
-<p align="left">Protoflio responsive website built with Django</p>
 <div align="center">
   <img src="https://skillicons.dev/icons?i=django" height="30" alt="django logo"  />
   <img width="12" />
@@ -19,6 +18,8 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="30" alt="git logo"  />
   <img width="12" />
 </div>
+
+<p align="left">Protoflio responsive website built with Django</p>
 
 ###
 
