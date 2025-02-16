@@ -58,7 +58,7 @@
 - **Python** 🦴
 - **Django** 💚
 
-Install Github ⏬
+Download Project ⏬
 ```bash
 git clone https://github.com/cymilad/django_resume.git
 ```
