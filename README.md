@@ -53,6 +53,12 @@
 
 ###
 
+<div align="center">
+  <img src="https://github.com/cymilad/django_resume/blob/resume/Pictures/fullpage.png"  />
+</div>
+
+###
+
 <h3 align="left">Install requirements 🔧</h3>
 
 - **Python** 🦴
