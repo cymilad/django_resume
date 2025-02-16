@@ -58,6 +58,8 @@
 - **Python** 🦴
 - **Django** 💚
 
+
+Install Virtualenv 📦
 ```bash
 pip install virtualenv
 ```
@@ -67,11 +69,12 @@ Windows Terminal 🪟
 .\venv\Scripts\activate
 ```
 
+Library Python for Run Project 🛠️
 ```bash
 pip install -r requirements.txt
 ```
 
-```bash
+```bash 🌐
 python manage.py runserver
 ```
 
