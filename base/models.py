@@ -173,3 +173,32 @@ class BlogPost(models.Model):
     class Meta:
         verbose_name = 'پست وبلاگ'
         verbose_name_plural = 'مدیریت پست وبلاگ'
+
+
+class ContactInfo(models.Model):
+    address = models.CharField(max_length=255, verbose_name='آدرس')
+    email = models.EmailField(verbose_name='ایمیل')
+    phone = models.CharField(max_length=20, verbose_name='تلفن')
+
+    def __str__(self):
+        return self.email
+
+    class Meta:
+        verbose_name = 'اطلاعات تماس من'
+        verbose_name_plural = 'تنظیمات اطلاعات تماس من'
+
+
+class ContactMessage(models.Model):
+    name = models.CharField(max_length=150, verbose_name='نام')
+    email = models.EmailField(verbose_name='ایمیل')
+    phone = models.CharField(max_length=20, verbose_name='تلفن')
+    subject = models.CharField(max_length=200, verbose_name='موضوع')
+    message = models.TextField(verbose_name='پیام')
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name='زمان ایجاد')
+
+    def __str__(self):
+        return f'{self.name} - {self.subject}'
+
+    class Meta:
+        verbose_name = 'ارتباط با من'
+        verbose_name_plural = 'تنظیمات ارتباط با من'

@@ -20,6 +20,7 @@ def index(request):
     items = ProtfolioItem.objects.all()
     categories = ProtfolioItem.objects.values_list('category', flat=True).distinct()
     blog_posts = BlogPost.objects.all().order_by('-date')
+    contact_info = ContactInfo.objects.first()
 
     context = {
         'hero_sction': hero_section,
@@ -35,5 +36,6 @@ def index(request):
         'items': items,
         'socialmedia': socialmedias,
         'blog_posts': blog_posts,
+        'contact_info': contact_info,
     }
     return render(request, 'base/home.html', context)
