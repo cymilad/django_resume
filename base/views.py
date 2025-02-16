@@ -19,6 +19,7 @@ def index(request):
     educations = Education.objects.all()
     items = ProtfolioItem.objects.all()
     categories = ProtfolioItem.objects.values_list('category', flat=True).distinct()
+    blog_posts = BlogPost.objects.all().order_by('-date')
 
     context = {
         'hero_sction': hero_section,
@@ -33,5 +34,6 @@ def index(request):
         'categories': categories,
         'items': items,
         'socialmedia': socialmedias,
+        'blog_posts': blog_posts,
     }
     return render(request, 'base/home.html', context)

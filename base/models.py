@@ -15,6 +15,7 @@ class SocailMedia(models.Model):
         verbose_name = 'شبکه های اجتماعی'
         verbose_name_plural = 'تنظیمات شبکه های اجتماعی'
 
+
 class HeroSection(models.Model):
     first_name = models.CharField(max_length=100, verbose_name='نام')
     last_name = models.CharField(max_length=100, verbose_name='نام خانوادگی')
@@ -140,6 +141,7 @@ class Education(models.Model):
 class ProtfolioItem(models.Model):
     CATEGORY_CHOICES = [
         ('سایبر آموز', 'CyberAmooz'),
+        ('تدریس', 'techear'),
     ]
 
     title = models.CharField(max_length=255, verbose_name='عنوان')
@@ -155,3 +157,19 @@ class ProtfolioItem(models.Model):
     class Meta:
         verbose_name = 'نمونه کار'
         verbose_name_plural = 'تنظیمات نمونه کار'
+
+
+class BlogPost(models.Model):
+    title = models.CharField(max_length=200, verbose_name='عنوان')
+    category = models.CharField(max_length=100, verbose_name='دسته بندی')
+    date = models.DateField(verbose_name='تاریخ')
+    thumbnail = models.ImageField(upload_to='blog/thumbnails', verbose_name='تصویر')
+    main_image = models.ImageField(upload_to='blog/images', verbose_name='تصویر اصلی')
+    content = models.TextField(verbose_name='متن مقاله')
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'پست وبلاگ'
+        verbose_name_plural = 'مدیریت پست وبلاگ'

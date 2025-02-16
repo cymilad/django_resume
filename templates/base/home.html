@@ -615,144 +615,43 @@
                 </div>
                 <div class="news_list">
                     <ul>
-                        <li class="wow fadeInUp" data-wow-duration="1s">
-                            <div class="list_inner tilt-effect">
-                                <div class="image">
-                                    <img src="{% static 'img/thumbs/42-29.jpg' %}" alt=""/>
-                                    <div class="main" data-img-url="{% static 'img/news/1.jpg' %}"></div>
-                                    <a class="foliox_tm_full_link" href="#"></a>
-                                </div>
-                                <div class="details">
-                                    <div class="meta">
-                                        <p><a href="#">برندسازی</a> 15 فروردین 1401</p>
+                        {% for post in blog_posts %}
+                            <li class="wow fadeInUp" data-wow-duration="1s"
+                                style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
+                                <div class="list_inner tilt-effect"
+                                     style="will-change: transform; transform: perspective(300px) rotateX(0deg) rotateY(0deg);">
+                                    <div class="image">
+                                        <img src="{{ post.thumbnail.url }}" alt="">
+                                        <div class="main" data-img-url="{{ post.main_image.url }}"
+                                             style="background-image: url(&quot;img/news/1.jpg&quot;);">
+                                        </div>
+                                        <a class="foliox_tm_full_link" href="#"></a>
                                     </div>
-                                    <div class="title">
-                                        <h3><a href="#">موضوع شماره یک</a></h3>
-                                    </div>
-                                </div>
-
-                                <div class="news_hidden_details">
-                                    <div class="news_popup_informations">
-                                        <div class="text">
-                                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                                استفاده از
-                                                طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
-                                                سطرآنچنان
-                                                که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع
-                                                با
-                                                هدف بهبود ابزارهای کاربردی می باشد.</p>
-                                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                                استفاده از
-                                                طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
-                                                سطرآنچنان
-                                                که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع
-                                                با
-                                                هدف بهبود ابزارهای کاربردی می باشد.</p>
-                                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                                استفاده از
-                                                طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
-                                                سطرآنچنان
-                                                که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع
-                                                با
-                                                هدف بهبود ابزارهای کاربردی می باشد.</p>
+                                    <div class="details">
+                                        <div class="meta">
+                                            <p><a href="#">{{ post.category }}</a>{{ post.date }}</p>
+                                        </div>
+                                        <div class="title">
+                                            <h3>
+                                                <a href="#">{{ post.title }}</a>
+                                            </h3>
                                         </div>
                                     </div>
-                                </div>
 
-                            </div>
-                        </li>
-                        <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
-                            <div class="list_inner tilt-effect">
-                                <div class="image">
-                                    <img src="{% static 'img/thumbs/42-29.jpg' %}" alt=""/>
-                                    <div class="main" data-img-url="{% static 'img/news/2.jpg' %}"></div>
-                                    <a class="foliox_tm_full_link" href="#"></a>
-                                </div>
-                                <div class="details">
-                                    <div class="meta">
-                                        <p><a href="#">هوش مصنوعی</a> 28 خرداد 1401</p>
-                                    </div>
-                                    <div class="title">
-                                        <h3><a href="#">موضوع شماره دو</a></h3>
-                                    </div>
-                                </div>
-
-                                <div class="news_hidden_details">
-                                    <div class="news_popup_informations">
-                                        <div class="text">
-                                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                                استفاده از
-                                                طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
-                                                سطرآنچنان
-                                                که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع
-                                                با
-                                                هدف بهبود ابزارهای کاربردی می باشد..</p>
-                                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                                استفاده از
-                                                طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
-                                                سطرآنچنان
-                                                که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع
-                                                با
-                                                هدف بهبود ابزارهای کاربردی می باشد.</p>
-                                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                                استفاده از
-                                                طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
-                                                سطرآنچنان
-                                                که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع
-                                                با
-                                                هدف بهبود ابزارهای کاربردی می باشد.</p>
+                                    <div class="news_hidden_details">
+                                        <div class="news_popup_informations">
+                                            <div class="text">
+                                                <p>
+                                                    {{ post.content|linebreaks }}
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                            </div>
-                        </li>
-                        <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-                            <div class="list_inner tilt-effect">
-                                <div class="image">
-                                    <img src="{% static 'img/thumbs/42-29.jpg' %}" alt=""/>
-                                    <div class="main" data-img-url="{% static 'img/news/3.jpg' %}"></div>
-                                    <a class="foliox_tm_full_link" href="#"></a>
                                 </div>
-                                <div class="details">
-                                    <div class="meta">
-                                        <p><a href="#">طراحی</a> 12 تیر 1401</p>
-                                    </div>
-                                    <div class="title">
-                                        <h3><a href="#">موضوع شماره سه</a></h3>
-                                    </div>
-                                </div>
+                            </li>
+                        {% endfor %}
 
-                                <div class="news_hidden_details">
-                                    <div class="news_popup_informations">
-                                        <div class="text">
-                                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                                استفاده از
-                                                طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
-                                                سطرآنچنان
-                                                که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع
-                                                با
-                                                هدف بهبود ابزارهای کاربردی می باشد..</p>
-                                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                                استفاده از
-                                                طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
-                                                سطرآنچنان
-                                                که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع
-                                                با
-                                                هدف بهبود ابزارهای کاربردی می باشد.</p>
-                                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                                استفاده از
-                                                طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
-                                                سطرآنچنان
-                                                که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع
-                                                با
-                                                هدف بهبود ابزارهای کاربردی می باشد.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -788,8 +687,11 @@
                                     </div>
                                     <div class="short">
                                         <h3>ایمیل</h3>
-                                        <span><a href="#"><span class="__cf_email__"
-                                                                data-cfemail="066e636a6a6946626962692865696b">aaaaaaaa@Gmail.com</span></a></span>
+                                        <span><a href="#">
+                                            <span class="__cf_email__"
+                                                                data-cfemail="066e636a6a6946626962692865696b">
+                                                aaaaaaaa@Gmail.com
+                                            </span></a></span>
                                     </div>
                                 </div>
                             </li>
