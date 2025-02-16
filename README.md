@@ -44,6 +44,8 @@
 
 <h3 align="left">Contact Author 👨‍💻</h3>
 
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/cyberamooz) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://youtube.com/@cyberamooz) [![Telegram](https://img.shields.io/badge/Telegram-%23FFFFFF.svg?logo=Telegram&logoColor=blue)](https://t.com/cymilad)
+
+
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/cyberamooz) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://youtube.com/@cyberamooz) [![Telegram](https://img.shields.io/badge/Telegram-%23FFFFFF.svg?logo=Telegram&logoColor=blue)](https://t.me/cymilad) [![Email](https://img.shields.io/badge/Yahoo-%236001D2.svg?logo=Yahoo&logoColor=blue)](https://t.me/cymilad)
 
 ###
