@@ -69,7 +69,7 @@ Windows Terminal 🪟
 .\venv\Scripts\activate
 ```
 
-Library Python for Run Project 🛠️
+Library Python requirement for Run Project 🛠️
 ```bash
 pip install -r requirements.txt
 ```
