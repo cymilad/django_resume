@@ -58,6 +58,10 @@
 - **Python** 🦴
 - **Django** 💚
 
+```bash
+pip install -r requirements.txt
+```
+
 ###
 
 <h3 align="left">Contact Author 👨‍💻</h3>
