@@ -36,19 +36,19 @@
 ###
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/cymilad/django_resume/refs/heads/resume/Pictures/admin-panel-2.png?token=GHSAT0AAAAAAC4YZPBHZG52ZZB2MMPQEJRIZ5R3FJQ"  />
+  <img src="https://github.com/cymilad/django_resume/blob/resume/Pictures/admin-panel-2.png"  />
 </div>
 
 ###
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/cymilad/django_resume/refs/heads/resume/Pictures/admin-panel-3.png?token=GHSAT0AAAAAAC4YZPBGOJZTLIJZTVWXH2YOZ5R3FVA"  />
+  <img src="https://github.com/cymilad/django_resume/blob/resume/Pictures/admin-panel-3.png"  />
 </div>
 
 ###
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/cymilad/django_resume/refs/heads/resume/Pictures/admin-panel-4.png?token=GHSAT0AAAAAAC4YZPBGRZJUSGJMJA3VYABEZ5R3H2A"  />
+  <img src="https://github.com/cymilad/django_resume/blob/resume/Pictures/admin-panel-4.png"  />
 </div>
 
 ###
